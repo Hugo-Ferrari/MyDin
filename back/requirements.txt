@@ -1,4 +1,10 @@
 fastapi
-uvicorn[standard]
+uvicorn
 motor
 python-dotenv
+python-jose[cryptography]
+bcrypt
+pydantic
+pydantic[email]
+requests
+pymongo

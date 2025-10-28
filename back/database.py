@@ -5,13 +5,13 @@ import asyncio
 
 load_dotenv()
 
-MONGODB_URL = os.getenv("MONGODB_URL")
+MONGO_URL = os.getenv("MONGODB_URL")
 DB_NAME = os.getenv("DB_NAME")
 
-if not MONGODB_URL or not DB_NAME:
+if not MONGO_URL or not DB_NAME:
     raise RuntimeError("Variáveis de ambiente MONGODB_URL ou DB_NAME não definidas")
 
-client = motor.motor_asyncio.AsyncIOMotorClient(MONGODB_URL)
+client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_URL)
 
 database = client[DB_NAME]
 
