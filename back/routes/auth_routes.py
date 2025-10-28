@@ -5,7 +5,6 @@ from database import get_database
 from schemas import user_schema, token_schema
 from models import user_model
 from utils import hash, jwt_handler
-
 from routes.deps import get_current_user
 
 router = APIRouter(prefix="/auth", tags=["Autenticação"])
@@ -58,6 +57,7 @@ async def login(form_data: user_schema.UserLogin, db: AsyncIOMotorDatabase = Dep
         token_type="bearer"
     )
 
+
 @router.get("/me", response_model=user_schema.UserBase)
 async def read_users_me(current_user: user_model.User = Depends(get_current_user)):
     return user_schema.UserBase(
@@ -68,3 +68,7 @@ async def read_users_me(current_user: user_model.User = Depends(get_current_user
         created_at=current_user.created_at
     )
 
+
+@router.post("/logout")
+async def logout():
+    return {"detail": "Logout realizado com sucesso."}
