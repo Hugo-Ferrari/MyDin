@@ -30,7 +30,7 @@ export default function Login() {
       const data = await res.json()
       localStorage.setItem("token", data.access_token)
       alert("Login realizado com sucesso!")
-      router.push("/dashboard") // ou qualquer rota protegida
+      router.push("/dashboard") 
     } catch (error) {
       alert("Erro ao conectar ao servidor.")
     } finally {
