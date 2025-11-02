@@ -14,7 +14,7 @@ export default function Login() {
     setLoading(true)
 
     try {
-      const res = await fetch("http://localhost:8000/auth/login", {
+      const res = await fetch("", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password })
@@ -39,7 +39,7 @@ export default function Login() {
   }
 
   return (
-    <div className="max-w-sm mx-auto mt-20 p-6 border rounded-lg shadow-md bg-white">
+    <div className="max-w-sm mx-auto mt-20 p-6 border rounded-lg shadow-md text-white">
       <h1 className="text-2xl font-semibold mb-4 text-center">Login</h1>
       <form onSubmit={handleLogin} className="space-y-4">
         <div>
