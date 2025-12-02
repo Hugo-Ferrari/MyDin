@@ -1,12 +1,14 @@
 import React from 'react'
 import Login from '../components/login'
+import CadastroLogin from '../components/cadastroLogin'
 
-function page() {
+
+export default function Page() {
   return (
     <div>
-        <Login/>
+      <CadastroLogin/>
+      <Login />
+
     </div>
   )
 }
-
-export default page
