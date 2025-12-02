@@ -1,7 +1,6 @@
 import os
 from dotenv import load_dotenv
 import motor.motor_asyncio
-import asyncio
 
 load_dotenv()
 
@@ -15,13 +14,15 @@ client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_URL)
 
 database = client[DB_NAME]
 
-async def get_database() -> motor.motor_asyncio.AsyncIOMotorDatabase:
+users = database.get_collection("users")
+
+async def get_database():
     return database
 
 async def check_db_connection():
     try:
         await client.admin.command('ping')
-        print(f"Conexão com o (banco: '{DB_NAME}') feita com sucesso.")
+        print(f"Conexão com o '{DB_NAME}' feita com sucesso.")
     except Exception as e:
         print(f"Falha ao conectar no {DB_NAME}: {e}")
-        print("Certifique-se de que o MongoDB está rodando em {MONGODB_URL}")
+        print(f"Certifique-se de que o MongoDB está acessível em {MONGO_URL}")

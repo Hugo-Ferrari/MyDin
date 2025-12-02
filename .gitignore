@@ -8,7 +8,6 @@ venv/
 ENV/
 env/
 .venv/
-.env
 
 # Distribution / packaging
 build/
@@ -68,4 +67,3 @@ dmypy.json
 
 # macOS
 .DS_Store
-
