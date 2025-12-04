@@ -1,7 +1,7 @@
 'use client'
 
-import { BellIcon, UserRoundIcon, MoonIcon, LogOutIcon } from "lucide-react"
-import React, { useState } from "react"
+import { BellIcon, UserRoundIcon, MoonIcon, LogOutIcon, SunIcon } from "lucide-react"
+import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -9,7 +9,49 @@ import { Button } from "@/components/ui/button"
 function Nav() {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const [notificationsOpen, setNotificationsOpen] = useState(false)
+  const [ isDark, setIsDark] = useState(false)
 
+  useEffect(()=>{
+    try{
+      const stored = localStorage.getItem("theme")
+      if(stored === "dark"){
+        document.documentElement.classList.add("dark")
+        setIsDark(true)
+      }
+      else if(stored === "light"){
+        document.documentElement.classList.remove("dark")
+        setIsDark(false)
+      }
+      else {
+        const prefersDark =window.matchMedia &&window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (prefersDark) {
+          document.documentElement.classList.add('dark')
+          setIsDark(true)
+        } else {
+          document.documentElement.classList.remove('dark')
+          setIsDark(false)
+        }
+      }
+    } catch {
+      // ambiente sem browser ou localStorage desabilitado
+    }
+  }, [])
+
+  const toggleDark = () => {
+    const next = !isDark
+    setIsDark(next)
+    try {
+      if (next) {
+        document.documentElement.classList.add('dark')
+        localStorage.setItem('theme', 'dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+        localStorage.setItem('theme', 'light')
+      }
+    } catch {
+      // ignore
+    }
+  }
   return (
     <nav className="fixed w-full z-20 top-0 left-0 shadow-lg bg-gradient-to-r from-[#579ac3] to-[#7aff66] backdrop-blur-sm">
       <div className="flex items-center justify-between h-20 mx-6 md:mx-10 px-4">
@@ -58,10 +100,12 @@ function Nav() {
             {/* Modo Noturno */}
             <li>
               <button
-                aria-label="Alternar modo noturno"
+                onClick={toggleDark}
+                aria-label={isDark ? "Desativar modo escuro" : "Ativar modo escuro"}
+                aria-pressed={isDark}
                 className="inline-flex items-center justify-center h-10 w-10 rounded-lg text-white hover:bg-white/20 transition-all duration-200 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/30"
               >
-                <MoonIcon className="h-5 w-5 md:h-6 md:w-6" strokeWidth={1.5} />
+                {isDark ? <SunIcon className="h-5 w-5 md:h-6 md:w-6" strokeWidth={1.5} /> : <MoonIcon className="h-5 w-5 md:h-6 md:w-6" strokeWidth={1.5} />}
               </button>
             </li>
 
@@ -84,8 +128,8 @@ function Nav() {
               {userMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl overflow-hidden animate-in fade-in slide-in-from-top-2">
                   <div className="px-4 py-3 border-b bg-gray-50">
-                    <div className="text-sm font-semibold text-gray-900">Hugo Ferrari</div>
-                    <div className="text-xs text-gray-500">usuario@example.com</div>
+                    <h1 className="text-sm font-semibold text-gray-900">Hugo Ferrari</h1>
+                    <h1 className="text-xs text-gray-500">usuario@example.com</h1>
                   </div>
                   <div className="p-2 space-y-1">
                     <Link
