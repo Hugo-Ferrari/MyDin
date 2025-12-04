@@ -1,21 +1,21 @@
-// components/BotaoLink.jsx
+
 import type { ReactNode } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-// Desestruturamos as props que o componente receberá
+
 export default function BotaoLink({ href, children, className }: { href: string; children: ReactNode; className?: string }) {
   
   
-  const classesPadrao = 'p-3 border-2 rounded-2xl bg-white text-black';
+  const classesPadrao = 'p-3 border-2 rounded-2xl bg-white text-black hover:bg-blue-600';
   
   
   const classesFinais = `${classesPadrao} ${className || ''}`;
 
   return (
-    // 'Button' é provavelmente um componente ou elemento que você já tem
+    
     <Button className={classesFinais}>
-      <Link href={href} className=" hover:underline">
+      <Link href={href} className=" ">
         {children} {}
       </Link>
     </Button>
