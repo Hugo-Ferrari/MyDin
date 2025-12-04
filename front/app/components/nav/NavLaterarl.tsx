@@ -1,4 +1,4 @@
-// ...existing code...
+
 import React, { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { PanelLeft, Home, Target, Zap, Settings, Trophy } from "lucide-react"
@@ -66,11 +66,11 @@ export function NavLateral() {
                 <Link
                   href={href}
                   className={`group flex items-center h-10 px-3 rounded-lg transition-colors duration-200 ${
-                    active ? "bg-blue-50 text-blue-600 font-semibold" : "hover:bg-[rgba(21,97,183,0.06)] hover:text-blue-600"
+                    active ? "bg-blue-50  font-semibold" : "hover:bg-[rgba(21,97,183,0.06)] hover:"
                   } ${open ? "gap-3 justify-start" : "justify-center"}`}
                 >
                   <span className="flex items-center justify-center w-8 flex-shrink-0">
-                    <Icon size={18} className={`${active ? "text-blue-600" : "text-gray-600"} transition-colors duration-200 block`} />
+                    <Icon size={18} className={`${active ? "" : ""} transition-colors duration-200 block`} />
                   </span>
 
                   <span
@@ -91,10 +91,10 @@ export function NavLateral() {
       {open && (
         <div className="flex-shrink-0 px-4 py-4 border-t">
           <div className="flex items-center gap-2">
-            <Trophy className="text-yellow-500" />
+            <Trophy className="" />
             <div>
               <div className="text-sm font-medium">Missões Semanais</div>
-              <div className="text-xs text-gray-500">Progresso atual: 75%</div>
+              <div className="text-xs te">Progresso atual: 75%</div>
             </div>
           </div>
 
@@ -105,7 +105,7 @@ export function NavLateral() {
                 <span className="text-sm font-medium">2 / 3</span>
               </div>
               <div className="h-2 bg-gray-200 rounded mt-1">
-                <div className="h-2 bg-blue-500 rounded" style={{ width: "66%" }} />
+                <div className="h-2  rounded" style={{ width: "66%" }} />
               </div>
             </div>
 
@@ -115,7 +115,7 @@ export function NavLateral() {
                 <span className="text-sm font-medium">5 / 5</span>
               </div>
               <div className="h-2 bg-gray-200 rounded mt-1">
-                <div className="h-2 bg-blue-500 rounded" style={{ width: "100%" }} />
+                <div className="h-2  rounded" style={{ width: "100%" }} />
               </div>
             </div>
           </div>
@@ -124,4 +124,3 @@ export function NavLateral() {
     </aside>
   )
 }
-// ...existing code...
