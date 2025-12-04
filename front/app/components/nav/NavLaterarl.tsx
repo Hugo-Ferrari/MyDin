@@ -1,4 +1,4 @@
-
+"use client"
 import React, { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { PanelLeft, Home, Target, Zap, Settings, Trophy } from "lucide-react"
@@ -86,41 +86,6 @@ export function NavLateral() {
           })}
         </ul>
       </nav>
-
-      {/* footer simplificado com progresso demonstrativo */}
-      {open && (
-        <div className="flex-shrink-0 px-4 py-4 border-t">
-          <div className="flex items-center gap-2">
-            <Trophy className="" />
-            <div>
-              <div className="text-sm font-medium">Missões Semanais</div>
-              <div className="text-xs te">Progresso atual: 75%</div>
-            </div>
-          </div>
-
-          <div className="mt-3 space-y-3">
-            <div>
-              <div className="flex justify-between text-sm">
-                <span>Responda 3 dúvidas</span>
-                <span className="text-sm font-medium">2 / 3</span>
-              </div>
-              <div className="h-2 bg-gray-200 rounded mt-1">
-                <div className="h-2  rounded" style={{ width: "66%" }} />
-              </div>
-            </div>
-
-            <div>
-              <div className="flex justify-between text-sm">
-                <span>Responda 5 dúvidas</span>
-                <span className="text-sm font-medium">5 / 5</span>
-              </div>
-              <div className="h-2 bg-gray-200 rounded mt-1">
-                <div className="h-2  rounded" style={{ width: "100%" }} />
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </aside>
   )
 }

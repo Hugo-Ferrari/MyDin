@@ -1,5 +1,11 @@
-import { NavLateral } from "../components/nav/NavLaterarl";
+import Nav from "../components/nav/Nav"
+import { NavLateral } from "../components/nav/NavLaterarl"
 
-export function Menu(){
-    <NavLateral/>
+export default function Menu() {
+  return (
+    <div>
+      <NavLateral />
+      <Nav/>
+    </div>
+  )
 }

@@ -8,7 +8,7 @@ export default function CadastroLogin() {
         <div className='max-w-sm mx-auto mt-20'>
             <div className=''>
                 <h1 className=' text-center text-lg font-semibold'>
-                    MyDin
+                    MonyFix
                 </h1>
                 <p className='text-gray-600 text-center'>
                     Gestão financeira inteligente e personalizada

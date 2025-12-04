@@ -47,7 +47,7 @@ export default function Cadastro({}) {
 
   return (
     <div className="max-w-sm mx-auto mt-10 p-6 border rounded-lg shadow-md">
-      <h1 className="text-2xl font-semibold mb-4 text-center">Criar Conta</h1>
+      <h1 className="text-2xl font-semibold mb-4">Criar Conta</h1>
       <p>Crie sua conta gratuita para começar</p>
       <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         <div>
