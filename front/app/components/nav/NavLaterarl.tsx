@@ -57,7 +57,7 @@ export function NavLateral() {
         </div>
       </div>
 
-      <nav className="flex-1 mt-4 px-4 overflow-auto">
+      <nav className="flex-1 mt-4 px-4 overflow-auto ">
         <ul className="flex flex-col gap-2">
           {navItems.map(({ href, label, Icon }) => {
             const active = pathname === href
@@ -65,7 +65,7 @@ export function NavLateral() {
               <li key={href}>
                 <Link
                   href={href}
-                  className={`group flex items-center h-10 px-3 rounded-lg transition-colors duration-200 ${
+                  className={`group flex items-center h-10 px-3 rounded-lg transition-colors duration-200  ${
                     active ? "bg-blue-50  font-semibold" : "hover:bg-[rgba(21,97,183,0.06)] hover:"
                   } ${open ? "gap-3 justify-start" : "justify-center"}`}
                 >

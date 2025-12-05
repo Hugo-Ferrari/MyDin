@@ -53,7 +53,7 @@ function Nav() {
     }
   }
   return (
-    <nav className="fixed w-full z-20 top-0 left-0 shadow-lg bg-gradient-to-r from-[#579ac3] to-[#7aff66] backdrop-blur-sm">
+    <nav className="fixed w-full z-20 top-0 left-0 shadow-lg bg-gradient-to-r from-[#fa3b3b]  to-[#f3fb53] backdrop-blur-sm">
       <div className="flex items-center justify-between h-20 mx-6 md:mx-10 px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center group hover:opacity-80 transition-opacity">
