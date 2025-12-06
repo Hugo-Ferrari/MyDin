@@ -3,27 +3,24 @@
 import { BellIcon, UserRoundIcon, MoonIcon, LogOutIcon, SunIcon } from "lucide-react"
 import React, { useEffect, useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 function Nav() {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const [notificationsOpen, setNotificationsOpen] = useState(false)
-  const [ isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(false)
 
-  useEffect(()=>{
-    try{
+  useEffect(() => {
+    try {
       const stored = localStorage.getItem("theme")
-      if(stored === "dark"){
+      if (stored === "dark") {
         document.documentElement.classList.add("dark")
         setIsDark(true)
-      }
-      else if(stored === "light"){
+      } else if (stored === "light") {
         document.documentElement.classList.remove("dark")
         setIsDark(false)
-      }
-      else {
-        const prefersDark =window.matchMedia &&window.matchMedia('(prefers-color-scheme: dark)').matches
+      } else {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (prefersDark) {
           document.documentElement.classList.add('dark')
           setIsDark(true)
@@ -52,13 +49,14 @@ function Nav() {
       // ignore
     }
   }
+
   return (
-    <nav className="fixed w-full z-20 top-0 left-0 shadow-lg bg-gradient-to-r from-[#fa3b3b]  to-[#f3fb53] backdrop-blur-sm">
+    <nav className="fixed w-full z-20 top-0 left-0 shadow-lg bg-gradient-to-r bg-gradient-to-b from-[#5D3FD3] via-[#A692FF] to-[#5D3FD3] dark:from-[#101010] dark:via-[#5D3FD3]/30 dark:to-[#101010] backdrop-blur-sm backdrop-blur-sm">
       <div className="flex items-center justify-between h-20 mx-6 md:mx-10 px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center group hover:opacity-80 transition-opacity">
           <div className="text-white font-bold text-xl md:text-2xl tracking-tight">
-            MyDin
+            MonyFix
           </div>
         </Link>
 
@@ -80,17 +78,17 @@ function Nav() {
 
               {/* Dropdown Notificações */}
               {notificationsOpen && (
-                <div className="absolute right-0 mt-2 w-72 bg-white rounded-lg shadow-xl p-4 space-y-3 animate-in fade-in slide-in-from-top-2">
-                  <div className="text-sm font-semibold text-gray-900">Notificações</div>
+                <div className="absolute right-0 mt-2 w-72 bg-white dark:bg-[#1B2631] rounded-lg shadow-xl p-4 space-y-3 animate-in fade-in slide-in-from-top-2">
+                  <div className="text-sm font-semibold text-[#1B2631] dark:text-[#F7F9F9]">Notificações</div>
                   <div className="space-y-2">
-                    <div className="p-2 bg-blue-50 rounded border-l-4 border-blue-500 text-sm text-gray-700">
-                      Sua meta de economia foi atingida!  {/*tenho que integrar com as notifiçãoe que terá no back*/}
+                    <div className="p-2 bg-[#F7F9F9] dark:bg-[#239B56]/20 rounded border-l-4 border-[#2ECC71] text-sm text-[#1B2631] dark:text-[#F7F9F9]">
+                      Sua meta de economia foi atingida! 🎉
                     </div>
-                    <div className="p-2 bg-yellow-50 rounded border-l-4 border-yellow-500 text-sm text-gray-700">
-                      Despesa acima do orçamento detectada. {/* exmeplos de notificação */}
+                    <div className="p-2 bg-[#F7F9F9] dark:bg-[#239B56]/20 rounded border-l-4 border-[#239B56] text-sm text-[#1B2631] dark:text-[#F7F9F9]">
+                      Despesa acima do orçamento detectada.
                     </div>
                   </div>
-                  <button className="w-full text-xs text-blue-600 hover:text-blue-700 font-medium py-1">
+                  <button className="w-full text-xs text-[#2ECC71] hover:text-[#239B56] font-medium py-1 transition-colors">
                     Ver todas
                   </button>
                 </div>
@@ -126,21 +124,21 @@ function Nav() {
 
               {/* User Menu Dropdown */}
               {userMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl overflow-hidden animate-in fade-in slide-in-from-top-2">
-                  <div className="px-4 py-3 border-b bg-gray-50">
-                    <h1 className="text-sm font-semibold text-gray-900">Hugo Ferrari</h1>
-                    <h1 className="text-xs text-gray-500">usuario@example.com</h1>
+                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-[#1B2631] rounded-lg shadow-xl overflow-hidden animate-in fade-in slide-in-from-top-2">
+                  <div className="px-4 py-3 border-b bg-[#F7F9F9] dark:bg-[#239B56]/30 border-[#D5D8DC] dark:border-[#239B56]">
+                    <h1 className="text-sm font-semibold text-[#1B2631] dark:text-[#F7F9F9]">Hugo Ferrari</h1>
+                    <h1 className="text-xs text-[#D5D8DC] dark:text-[#D5D8DC]/70">usuario@example.com</h1>
                   </div>
                   <div className="p-2 space-y-1">
                     <Link
                       href="/configuracoes"
-                      className="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors"
+                      className="flex items-center gap-2 px-3 py-2 text-sm text-[#1B2631] dark:text-[#F7F9F9] hover:bg-[#F7F9F9] dark:hover:bg-[#239B56]/30 hover:text-[#2ECC71] rounded transition-colors"
                     >
                       ⚙️ Configurações
                     </Link>
                     <Link
                       href="/perfil"
-                      className="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors"
+                      className="flex items-center gap-2 px-3 py-2 text-sm text-[#1B2631] dark:text-[#F7F9F9] hover:bg-[#F7F9F9] dark:hover:bg-[#239B56]/30 hover:text-[#2ECC71] rounded transition-colors"
                     >
                       👤 Perfil
                     </Link>
@@ -150,7 +148,7 @@ function Nav() {
                       localStorage.removeItem('token')
                       window.location.href = '/'
                     }}
-                    className="w-full flex items-center gap-2 px-4 py-3 text-sm text-red-600 hover:bg-red-50 border-t transition-colors font-medium"
+                    className="w-full flex items-center gap-2 px-4 py-3 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 border-t border-[#D5D8DC] dark:border-[#239B56] transition-colors font-medium"
                   >
                     <LogOutIcon className="h-4 w-4" />
                     Sair
