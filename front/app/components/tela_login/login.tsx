@@ -59,34 +59,34 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen flex bg-gradient-to-br from-[#ECECF1] via-white to-[#A692FF]/10">
+    <div className="min-h-screen flex bg-[#F8F9FC] dark:bg-[#1A2A4F]">
       {/* Left column: MyDin branding */}
-      <aside className="hidden md:flex w-1/2 items-center justify-start pl-12">
+      <aside className="hidden md:flex w-1/2 items-center justify-start pl-12 bg-gradient-to-br from-[#1A2A4F] to-[#0f1929]">
         <div>
-          <h1 className="text-7xl font-extrabold text-[#5D3FD3] leading-tight">
+          <h1 className="text-7xl font-extrabold text-[#3A86FF] leading-tight">
             MonyFix
           </h1>
-          <p className="mt-4 text-lg text-[#5D3FD3]/70 max-w-md font-medium">
+          <p className="mt-4 text-lg text-[#7EDCE2] max-w-md font-medium">
             Gerenciamento salarial inteligente e personalizado — controle suas finanças com clareza.
           </p>
 
           {/* Benefits list */}
           <div className="mt-8 space-y-3">
-            <div className="flex items-center gap-3 text-[#5D3FD3]">
-              <div className="w-8 h-8 rounded-full bg-[#F1C40F]/20 flex items-center justify-center">
-                <span className="text-[#F1C40F] font-bold">✓</span>
+            <div className="flex items-center gap-3 text-[#7EDCE2]">
+              <div className="w-8 h-8 rounded-full bg-[#9D4EDD]/30 flex items-center justify-center">
+                <span className="text-[#9D4EDD] font-bold">✓</span>
               </div>
               <span className="font-medium">Acompanhe seu salário em tempo real</span>
             </div>
-            <div className="flex items-center gap-3 text-[#5D3FD3]">
-              <div className="w-8 h-8 rounded-full bg-[#F1C40F]/20 flex items-center justify-center">
-                <span className="text-[#F1C40F] font-bold">✓</span>
+            <div className="flex items-center gap-3 text-[#7EDCE2]">
+              <div className="w-8 h-8 rounded-full bg-[#9D4EDD]/30 flex items-center justify-center">
+                <span className="text-[#9D4EDD] font-bold">✓</span>
               </div>
               <span className="font-medium">Analise deduções e benefícios</span>
             </div>
-            <div className="flex items-center gap-3 text-[#5D3FD3]">
-              <div className="w-8 h-8 rounded-full bg-[#F1C40F]/20 flex items-center justify-center">
-                <span className="text-[#F1C40F] font-bold">✓</span>
+            <div className="flex items-center gap-3 text-[#7EDCE2]">
+              <div className="w-8 h-8 rounded-full bg-[#9D4EDD]/30 flex items-center justify-center">
+                <span className="text-[#9D4EDD] font-bold">✓</span>
               </div>
               <span className="font-medium">Planeje suas metas financeiras</span>
             </div>
@@ -96,18 +96,18 @@ export default function Login() {
 
       {/* Right column: Login form */}
       <main className="flex-1 flex items-center justify-center px-6">
-        <div className="w-full max-w-md bg-white dark:bg-[#101010] rounded-2xl shadow-2xl p-8 border border-[#A692FF]/20 dark:border-[#A692FF]/30">
+        <div className="w-full max-w-md bg-white dark:bg-[#1A2A4F] rounded-2xl shadow-2xl p-8 border border-[#7EDCE2]/30 dark:border-[#7EDCE2]/50">
           {/* Header */}
           <div className="mb-8">
-            <div className="inline-block px-3 py-1 bg-[#5D3FD3]/10 dark:bg-[#A692FF]/20 rounded-full mb-4">
-              <span className="text-xs font-semibold text-[#5D3FD3] dark:text-[#A692FF]">
+            <div className="inline-block px-3 py-1 bg-[#3A86FF]/15 dark:bg-[#9D4EDD]/20 rounded-full mb-4">
+              <span className="text-xs font-semibold text-[#3A86FF] dark:text-[#7EDCE2]">
                 Bem-vindo de volta
               </span>
             </div>
-            <h1 className="text-3xl font-bold text-[#5D3FD3] dark:text-white mb-2">
+            <h1 className="text-3xl font-bold text-[#1A2A4F] dark:text-[#3A86FF] mb-2">
               Entrar
             </h1>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-600 dark:text-[#7EDCE2]/70">
               Entre com sua conta para acessar seu dashboard
             </p>
           </div>
@@ -115,7 +115,7 @@ export default function Login() {
           {/* Form */}
           <form onSubmit={handleLogin} className="space-y-5" noValidate>
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-[#5D3FD3] dark:text-[#A692FF] mb-2">
+              <label htmlFor="email" className="block text-sm font-semibold text-[#1A2A4F] dark:text-[#7EDCE2] mb-2">
                 Email
               </label>
               <input
@@ -127,19 +127,19 @@ export default function Login() {
                 required
                 autoComplete="email"
                 placeholder="seu@email.com"
-                className="w-full px-4 py-2 border border-[#A692FF]/30 dark:border-[#A692FF]/40 rounded-lg bg-white dark:bg-[#1a1a2e] text-[#5D3FD3] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#5D3FD3] dark:focus:ring-[#A692FF] transition-all"
+                className="w-full px-4 py-2 border border-[#7EDCE2]/30 dark:border-[#7EDCE2]/40 rounded-lg bg-white dark:bg-[#0f1929] text-[#1A2A4F] dark:text-white placeholder-gray-400 dark:placeholder-[#7EDCE2]/50 focus:outline-none focus:ring-2 focus:ring-[#3A86FF] dark:focus:ring-[#7EDCE2] transition-all"
                 disabled={loading}
               />
             </div>
 
             <div>
               <div className="flex items-center justify-between mb-2">
-                <label htmlFor="password" className="block text-sm font-semibold text-[#5D3FD3] dark:text-[#A692FF]">
+                <label htmlFor="password" className="block text-sm font-semibold text-[#1A2A4F] dark:text-[#7EDCE2]">
                   Senha
                 </label>
                 <Link
                   href="/recuperar-senha"
-                  className="text-xs text-[#5D3FD3] dark:text-[#A692FF] hover:text-[#A692FF] dark:hover:text-[#F1C40F] transition-colors"
+                  className="text-xs text-[#3A86FF] dark:text-[#7EDCE2] hover:text-[#1A5FD4] dark:hover:text-[#9D4EDD] transition-colors font-medium"
                 >
                   Esqueceu?
                 </Link>
@@ -153,7 +153,7 @@ export default function Login() {
                 required
                 autoComplete="current-password"
                 placeholder="••••••••"
-                className="w-full px-4 py-2 border border-[#A692FF]/30 dark:border-[#A692FF]/40 rounded-lg bg-white dark:bg-[#1a1a2e] text-[#5D3FD3] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#5D3FD3] dark:focus:ring-[#A692FF] transition-all"
+                className="w-full px-4 py-2 border border-[#7EDCE2]/30 dark:border-[#7EDCE2]/40 rounded-lg bg-white dark:bg-[#0f1929] text-[#1A2A4F] dark:text-white placeholder-gray-400 dark:placeholder-[#7EDCE2]/50 focus:outline-none focus:ring-2 focus:ring-[#3A86FF] dark:focus:ring-[#7EDCE2] transition-all"
                 disabled={loading}
               />
             </div>
@@ -161,7 +161,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-[#5D3FD3] to-[#A692FF] hover:from-[#A692FF] hover:to-[#5D3FD3] text-white font-semibold py-3 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed shadow-lg"
+              className="w-full bg-gradient-to-r from-[#3A86FF] to-[#1A5FD4] hover:from-[#1A5FD4] hover:to-[#3A86FF] text-white font-semibold py-3 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed shadow-lg"
             >
               {loading ? 'Entrando...' : 'Entrar'}
             </button>
@@ -170,10 +170,10 @@ export default function Login() {
           {/* Divider */}
           <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-[#A692FF]/20 dark:border-[#A692FF]/30"></div>
+              <div className="w-full border-t border-[#7EDCE2]/20 dark:border-[#7EDCE2]/40"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-white dark:bg-[#101010] text-gray-600 dark:text-gray-400">
+              <span className="px-2 bg-white dark:bg-[#1A2A4F] text-gray-600 dark:text-[#7EDCE2]/70">
                 Não tem conta?
               </span>
             </div>
@@ -182,16 +182,16 @@ export default function Login() {
           {/* Cadastro link */}
           <Link
             href="/cadastro"
-            className="w-full block text-center px-4 py-3 border-2 border-[#5D3FD3] dark:border-[#A692FF] text-[#5D3FD3] dark:text-[#A692FF] font-semibold rounded-lg hover:bg-[#5D3FD3]/10 dark:hover:bg-[#A692FF]/10 transition-all duration-200"
+            className="w-full block text-center px-4 py-3 border-2 border-[#3A86FF] dark:border-[#7EDCE2] text-[#3A86FF] dark:text-[#7EDCE2] font-semibold rounded-lg hover:bg-[#3A86FF]/10 dark:hover:bg-[#7EDCE2]/10 transition-all duration-200"
           >
             Criar Conta
           </Link>
 
           {/* Footer */}
-          <div className="mt-6 pt-6 border-t border-[#A692FF]/20 dark:border-[#A692FF]/30">
-            <p className="text-xs text-center text-gray-500 dark:text-gray-400">
+          <div className="mt-6 pt-6 border-t border-[#7EDCE2]/20 dark:border-[#7EDCE2]/30">
+            <p className="text-xs text-center text-gray-500 dark:text-[#7EDCE2]/60">
               Ao acessar, você concorda com nossos{' '}
-              <Link href="/termos" className="text-[#5D3FD3] dark:text-[#A692FF] hover:underline font-medium">
+              <Link href="/termos" className="text-[#3A86FF] dark:text-[#7EDCE2] hover:underline font-medium">
                 Termos de Serviço
               </Link>
             </p>

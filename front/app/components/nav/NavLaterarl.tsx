@@ -36,7 +36,7 @@ export function NavLateral() {
   return (
     <aside
       aria-label="Navegação lateral"
-      className={`fixed top-20 left-0 z-40 h-[calc(100vh-5rem)] bg-gradient-to-b from-[#5D3FD3] via-[#A692FF] to-[#5D3FD3] dark:from-[#101010] dark:via-[#5D3FD3]/30 dark:to-[#101010] backdrop-blur-sm text-white shadow-lg flex flex-col justify-between transition-all duration-300 ease-in-out ${
+      className={`fixed top-20 left-0 z-40 h-[calc(100vh-5rem)] bg-gradient-to-b from-[#1A2A4F] via-[#3A86FF] to-[#1A2A4F] dark:from-[#1A2A4F] dark:via-[#3A86FF]/20 dark:to-[#1A2A4F] backdrop-blur-sm text-white shadow-lg flex flex-col justify-between transition-all duration-300 ease-in-out ${
         open ? "w-72" : "w-20"
       }`}
     >
@@ -47,7 +47,7 @@ export function NavLateral() {
             variant="ghost"
             aria-expanded={open}
             aria-label={open ? "Fechar menu" : "Abrir menu"}
-            className="flex items-center justify-center w-10 h-10 text-white hover:bg-white/20 transition-transform hover:scale-105 focus:ring-2 focus:ring-[#F1C40F]/30"
+            className="flex items-center justify-center w-10 h-10 text-white hover:bg-[#7EDCE2]/20 transition-all hover:scale-105 focus:ring-2 focus:ring-[#7EDCE2]/40"
           >
             <PanelLeft
               className={`transform transition-transform duration-300 ease-in-out ${open ? "rotate-0" : "rotate-180"}`}
@@ -67,12 +67,12 @@ export function NavLateral() {
                   href={href}
                   className={`group flex items-center h-10 px-3 rounded-lg transition-all duration-200 ${
                     active
-                      ? "bg-[#F1C40F] text-[#5D3FD3] font-semibold shadow-lg"
-                      : "text-white hover:bg-white/20 dark:hover:bg-[#A692FF]/30"
+                      ? "bg-[#3A86FF] text-white font-semibold shadow-lg border-l-4 border-[#9D4EDD]"
+                      : "text-white hover:bg-[#7EDCE2]/15 dark:hover:bg-[#7EDCE2]/20"
                   } ${open ? "gap-3 justify-start" : "justify-center"}`}
                 >
                   <span className="flex items-center justify-center w-8 flex-shrink-0">
-                    <Icon size={18} className="transition-colors duration-200 block" />
+                    <Icon size={18} className={`transition-colors duration-200 block ${active ? "text-[#7EDCE2]" : "text-white"}`} />
                   </span>
 
                   <span
@@ -91,33 +91,33 @@ export function NavLateral() {
 
       {/* Footer com progresso/dicas */}
       {open && (
-        <div className="flex-shrink-0 px-4 py-4 border-t border-white/20">
-          <div className="flex items-center gap-2 mb-3">
-            <Trophy className="text-[#F1C40F]" size={18} />
+        <div className="px-5 py-4 border-t border-[#7EDCE2]/20">
+          <div className="flex items-center gap-2 mb-4">
+            <Trophy className="text-[#9D4EDD]" size={18} />
             <div>
               <div className="text-sm font-semibold text-white">Progressos</div>
-              <div className="text-xs text-white/70">Metas do mês</div>
+              <div className="text-xs text-[#7EDCE2]/70">Metas do mês</div>
             </div>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-3">
             <div>
-              <div className="flex justify-between text-xs text-white/80 mb-1">
+              <div className="flex justify-between text-xs text-[#7EDCE2] mb-1">
                 <span>Receitas registradas</span>
                 <span className="font-bold">4 / 5</span>
               </div>
               <div className="h-2 bg-white/20 rounded-full overflow-hidden">
-                <div className="h-2 bg-[#F1C40F] rounded-full transition-all" style={{ width: "80%" }} />
+                <div className="h-2 bg-gradient-to-r from-[#3A86FF] to-[#7EDCE2] rounded-full transition-all" style={{ width: "80%" }} />
               </div>
             </div>
 
             <div>
-              <div className="flex justify-between text-xs text-white/80 mb-1">
+              <div className="flex justify-between text-xs text-[#7EDCE2] mb-1">
                 <span>Metas financeiras</span>
                 <span className="font-bold">2 / 3</span>
               </div>
               <div className="h-2 bg-white/20 rounded-full overflow-hidden">
-                <div className="h-2 bg-[#A692FF] rounded-full transition-all" style={{ width: "66%" }} />
+                <div className="h-2 bg-gradient-to-r from-[#9D4EDD] to-[#3A86FF] rounded-full transition-all" style={{ width: "66%" }} />
               </div>
             </div>
           </div>
