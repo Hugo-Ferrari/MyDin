@@ -6,32 +6,31 @@ import BotaoLink from './botaoLink'
 
 export default function CadastroLogin() {
   return (
-    <div className="min-h-screen flex bg-[#F8F9FC] dark:bg-[#1A2A4F]">
-      {/* Left column: MyDin branding */}
-      <aside className="hidden md:flex w-1/2 items-center justify-start pl-12 ">
+     <div className="min-h-screen flex bg-[#F8F9FC] dark:bg-[#1A2A4F]">
+      {/* Left column: Branding / features */}
+      <aside className="hidden md:flex w-1/2 items-center justify-start pl-12 bg-gradient-to-br from-[#1A2A4F] to-[#0f1929]">
         <div>
           <h1 className="text-7xl font-extrabold text-[#3A86FF] leading-tight">
             MonyFix
           </h1>
-          <p className="mt-4 text-lg text-[#1A2A4F] max-w-md font-medium">
+          <p className="mt-4 text-lg text-[#7EDCE2] max-w-md font-medium">
             Gerenciamento salarial inteligente e personalizado — controle suas finanças com clareza.
           </p>
 
-          {/* Benefits list */}
           <div className="mt-8 space-y-3">
-            <div className="flex items-center gap-3 text-[#1A2A4F]">
+            <div className="flex items-center gap-3 text-[#7EDCE2]">
               <div className="w-8 h-8 rounded-full bg-[#9D4EDD]/30 flex items-center justify-center">
                 <span className="text-[#9D4EDD] font-bold">✓</span>
               </div>
               <span className="font-medium">Cadastro rápido e seguro</span>
             </div>
-            <div className="flex items-center gap-3 text-[#1A2A4F]">
+            <div className="flex items-center gap-3 text-[#7EDCE2]">
               <div className="w-8 h-8 rounded-full bg-[#9D4EDD]/30 flex items-center justify-center">
                 <span className="text-[#9D4EDD] font-bold">✓</span>
               </div>
               <span className="font-medium">Acesso instantâneo ao seu dashboard</span>
             </div>
-            <div className="flex items-center gap-3 text-[#1A2A4F]">
+            <div className="flex items-center gap-3 text-[#7EDCE2]">
               <div className="w-8 h-8 rounded-full bg-[#9D4EDD]/30 flex items-center justify-center">
                 <span className="text-[#9D4EDD] font-bold">✓</span>
               </div>
@@ -40,7 +39,6 @@ export default function CadastroLogin() {
           </div>
         </div>
       </aside>
-
       {/* Right column: Card com ações de entrada/cadastro */}
       <main className="flex-1 flex items-center justify-center px-6">
         <div className="w-full max-w-md bg-white dark:bg-[#1A2A4F] rounded-2xl shadow-2xl p-8 border border-black/30 dark:border-black/50">
