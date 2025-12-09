@@ -51,7 +51,7 @@ function Nav() {
   }
 
   return (
-    <nav className="fixed w-full z-20 top-0 left-0 shadow-lg bg-gradient-to-r from-[#1A2A4F] via-[#3A86FF] to-[#1A2A4F] dark:from-[#1A2A4F] dark:via-[#3A86FF]/20 dark:to-[#1A2A4F] backdrop-blur-sm text-white-shadow-lg">
+    <nav className="fixed w-full z-20 top-0 left-0 shadow-lg bg-gradient-to-r from-[#1A2A4F] via-[#3A86FF] to-[#1A2A4F] dark:from-[#1A2A4F] dark:via-[#3A86FF]/20 dark:to-[#1A2A4F] backdrop-blur-sm">
       <div className="flex items-center justify-between h-20 mx-6 md:mx-10 px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center group hover:opacity-80 transition-opacity">
