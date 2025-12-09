@@ -91,7 +91,7 @@ export function NavLateral() {
 
       {/* Footer com progresso/dicas */}
       {open && (
-        <div className="px-5 py-4 border-t border-[#7EDCE2]/20">
+        <div className="px-5 py-8 border-t border-[#7EDCE2]/20">
           <div className="flex items-center gap-2 mb-4">
             <Trophy className="text-[#9D4EDD]" size={18} />
             <div>
