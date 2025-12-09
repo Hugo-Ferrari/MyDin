@@ -36,7 +36,7 @@ export function NavLateral() {
   return (
     <aside
       aria-label="Navegação lateral"
-      className={`fixed top-20 left-0 z-40 h-[calc(100vh-5rem)] bg-gradient-to-b from-[#1A2A4F] via-[#3A86FF] to-[#1A2A4F] dark:from-[#1A2A4F] dark:via-[#3A86FF]/20 dark:to-[#1A2A4F] backdrop-blur-sm text-white shadow-lg flex flex-col justify-between transition-all duration-300 ease-in-out ${
+      className={`fixed top-20 left-0 z-40 h-[calc(100vh-5rem)] bg-gradient-to-b from-[#1A2A4F] via-[#3A86FF] to-[#1A2A4F] dark:from-[#1A2A4F] dark:via-[#1A2A4F]/95 dark:to-[#1A2A4F] backdrop-blur-sm text-white shadow-lg flex flex-col justify-between transition-all duration-300 ease-in-out ${
         open ? "w-72" : "w-20"
       }`}
     >
