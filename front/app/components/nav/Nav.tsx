@@ -127,7 +127,7 @@ function Nav() {
                 <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-[#1A2A4F] rounded-lg shadow-xl overflow-hidden animate-in fade-in slide-in-from-top-2 border border-[#7EDCE2]/20 dark:border-[#7EDCE2]/30">
                   <div className="px-4 py-3 border-b bg-[#F8F9FC] dark:bg-[#3A86FF]/10 border-[#7EDCE2]/20 dark:border-[#7EDCE2]/30">
                     <h1 className="text-sm font-semibold text-[#1A2A4F] dark:text-[#3A86FF]">Hugo Ferrari</h1>
-                    <h1 className="text-xs text-[#7EDCE2] dark:text-[#7EDCE2]/80">usuario@example.com</h1>
+                    <h1 className="text-xs text-gray-600 dark:text-[#7EDCE2]/80">usuario@example.com</h1>
                   </div>
                   <div className="p-2 space-y-1">
                     <Link
